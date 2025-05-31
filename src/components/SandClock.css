@@ -1,0 +1,60 @@
+.sandclock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sand-top {
+  transform-origin: 24px 22px;
+  animation: sandtop 2s infinite linear;
+}
+
+.sand-bottom {
+  opacity: 0.5;
+  animation: sandbottom 2s infinite linear;
+}
+
+.sand-flow {
+  opacity: 0.8;
+  animation: sandflow 2s infinite linear;
+}
+
+@keyframes sandtop {
+  0% { opacity: 1; }
+  80% { opacity: 0.2; }
+  100% { opacity: 0; }
+}
+
+@keyframes sandbottom {
+  0% { opacity: 0.5; }
+  80% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes sandflow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.hourglass-emoji {
+  font-size: 36px;
+  animation: pulse 1.2s infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.sandclock-message {
+  font-weight: bold;
+  color: #22314B;
+  font-size: 1.1rem;
+  text-align: center;
+  direction: rtl;
+} 
